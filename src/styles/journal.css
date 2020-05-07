@@ -1,6 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 form {
     display: flex;
     flex-direction: column;
+    width: 45vw;
+    font-weight: bolder;
+    /* border: 1px solid brown */
 }
 
 fieldset {
@@ -8,3 +16,25 @@ fieldset {
     flex-direction: column;
 }
 
+body {
+    background-image: url("/src/unicorn.jpg") ;
+    color: pink;
+}
+
+button {
+    background-color: pink;
+    /* border: 1px solid red; */
+}
+
+.form-container {
+    margin-left: 50vw;
+    margin-top: 45vh; 
+    width: 45vw;
+    /* border: 1px solid aqua; */
+}
+
+.form-heading {
+    /* border: 1px solid orange; */
+    text-align: center;
+    font-size: 5vh;
+}

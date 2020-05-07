@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <h1>Daily Journal</h1>
+  <div class="form-container">
+  <h1 class="form-heading">Daily Journal</h1>
   <form action="">
     <fieldset>
       <label for="journalDate">Date of Entry</label>
@@ -24,7 +25,7 @@
 
     <fieldset>
       <label for="journalEntry">Journal Entry</label>
-      <textarea name="journalEntry" id="journalEntry" cols="100" rows="5"></textarea>
+      <textarea name="journalEntry" id="journalEntry"></textarea>
     </fieldset>
 
     <fieldset>
@@ -40,7 +41,7 @@
   </form>
 
   <button class="record-btn" id="record-btn">Record Journal Entry</button>
-
+</div>
   <article class="entry-log">
 
   </article>
