@@ -1,5 +1,14 @@
 import APIManager from './APIManager.js'
 
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
+
+    call the method within DOMPrinter
+    to get the data and display it.
+*/
+
+
 //Puts the entry into HTML tags
 const formatJournalEntry = (journalEntry) => {
     // create your own HTML structure for a journal entry
