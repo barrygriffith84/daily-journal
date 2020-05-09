@@ -1,6 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
+    font-family: 'Cinzel', serif;
 }
 
 form {
@@ -23,12 +24,13 @@ body {
 
 button {
     background-color: pink;
+    font-family: 'Cinzel', serif;
     /* border: 1px solid red; */
 }
 
 .form-container {
     margin-left: 50vw;
-    margin-top: 45vh; 
+    margin-top: 40vh; 
     width: 45vw;
     /* border: 1px solid aqua; */
 }
@@ -36,5 +38,10 @@ button {
 .form-heading {
     /* border: 1px solid orange; */
     text-align: center;
-    font-size: 5vh;
+    font-size: 4vw;
+    font-family: 'Cedarville Cursive', cursive;
+    margin-bottom: 0vh;
+    padding-bottom: 0vh;
+    padding-top: 0vh;
+    margin-top: 0vh;
 }
