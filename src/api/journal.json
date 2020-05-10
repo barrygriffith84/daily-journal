@@ -1,12 +1,18 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "Date": "4/17/2020",
-            "concept": "Daily Journal",
-            "entry": "Instructor Spurlock did an amazing job explaining how to do the Daily Journal exercise",
-            "mood": "Jubilant"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "Date": "4/17/2020",
+      "concept": "Daily Journal",
+      "entry": "Instructor Spurlock did an amazing job explaining how to do the Daily Journal exercise",
+      "mood": "Jubilant"
+    },
+    {
+      "Date": "2020-05-10",
+      "concept": "POST",
+      "entry": "Testing a method to POST to the DOM.",
+      "mood": "Flummoxed",
+      "id": 2
+    }
+  ]
 }
-

@@ -4,13 +4,13 @@ const createJournalEntry = () => {
     const conceptsValue = document.querySelector("#conceptsCovered").value
     const entryValue = document.querySelector("#journalEntry").value
     const moodValue = document.querySelector("#mood").value
-    const inputObject = {
+    const journalEntryObject = {
         Date: `${dateValue}`,
         concept: `${conceptsValue}`,
         entry: `${entryValue}`,
         mood: `${moodValue}`
     }
-    return inputObject;
+    return journalEntryObject;
 }
 
 export default createJournalEntry
