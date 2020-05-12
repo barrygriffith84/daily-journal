@@ -6,7 +6,7 @@ import APIManager from './APIManager.js'
 printJournalToTheDOM()
 
 
-//Listens for the record button, creates a new journal entry, and prints the journal to the DOM
+//  Listens for the record button, creates a new journal entry, and prints the journal to the DOM
 document.querySelector("#record-btn").addEventListener("click", function(){   
     
     // Creates a new journal entry based on the information in the form and posts it to journal.json
@@ -16,4 +16,11 @@ document.querySelector("#record-btn").addEventListener("click", function(){
     printJournalToTheDOM();
 })
 
+document.querySelector("#entry-log").addEventListener("click", () => {
+    if(event.target.id.includes("delete-btn") ) {
+        const IDToDelete = event.target.id.split("-")[2]
+        console.log(IDToDelete)
+        APIManager.deleteJournalEntry(IDToDelete)
 
+    }
+})

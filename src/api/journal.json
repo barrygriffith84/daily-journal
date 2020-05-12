@@ -8,11 +8,18 @@
       "mood": "Jubilant"
     },
     {
-      "Date": "2020-05-10",
-      "concept": "POST",
-      "entry": "Testing a method to POST to the DOM.",
+      "Date": "2020-05-11",
+      "concept": "Array Methods",
+      "entry": "Tommy lectured about array methods: forEach, map, reduce, filter, and sort",
       "mood": "Flummoxed",
-      "id": 2
+      "id": 3
+    },
+    {
+      "Date": "2020-05-12",
+      "concept": "Deleting entries from a JSON file",
+      "entry": "Jordan lectured on how to delete entries from a JSON file by adding a delete button to the object that are printed.  She used the restaurants api as an example.",
+      "mood": "Moderately Pleased",
+      "id": 4
     }
   ]
 }

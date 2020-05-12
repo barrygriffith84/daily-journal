@@ -13,12 +13,13 @@ import APIManager from './APIManager.js'
 const formatJournalEntry = (journalEntry) => {
     // create your own HTML structure for a journal entry
     return `
-        <section class="single-entry">
+        <section class="single-entry" id="single-entry-${journalEntry.id}">
             <br>
             <h3>${journalEntry.concept}</h3>
             <p>${journalEntry.Date}</p>
             <p>${journalEntry.entry}</p>
             <p>${journalEntry.mood}</p>
+            <button class="delete-btn" id="delete-btn-${journalEntry.id}">Delete</button>
         </section
     `
 }

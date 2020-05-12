@@ -12,7 +12,16 @@ const APIManager = {
             },
             body: JSON.stringify(journalEntry)
         })
+    },
+
+    deleteJournalEntry(idToDelete) {
+        fetch(` http://localhost:8088/entries/${idToDelete}`, {
+            method: "DELETE"
+        })
     }
 }
+
+
+
 
 export default APIManager
