@@ -20,6 +20,13 @@
       "entry": "Jordan lectured on how to delete entries from a JSON file by adding a delete button to the object that are printed.  She used the restaurants api as an example.",
       "mood": "Moderately Pleased",
       "id": 4
+    },
+    {
+      "Date": "2020-05-13",
+      "concept": "CRUD: Updating",
+      "entry": "Jordan lectured on editing an object in the DOM.  We learned how to inject a form in the DOM entry and autopopulate it with information from the JSON file.",
+      "mood": "Drained",
+      "id": 5
     }
   ]
 }

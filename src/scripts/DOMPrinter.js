@@ -52,7 +52,6 @@ printFilteredJournalToTheDOM(moodInput) {
             document.querySelector(".entry-log").innerHTML += formatJournalEntry(entry);
         })
     })
-
 }
 }
 

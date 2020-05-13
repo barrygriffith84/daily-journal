@@ -3,7 +3,7 @@ import createJournalEntry from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
 //Prints the entries to the DOM
-// DOMPrinter.printJournalToTheDOM()
+DOMPrinter.printJournalToTheDOM()
 
 
 document.querySelector("#conceptsCovered").addEventListener("keyup", () => {
@@ -52,5 +52,9 @@ document.querySelector("#entry-log").addEventListener("click", () => {
 // DOMPrinter.printFilteredJournalToTheDOM()
 
 document.querySelector("#radio-form").addEventListener("click", () => {
-    
+    if (event.target.id === "All") {
+        DOMPrinter.printJournalToTheDOM();
+    } else {
+        DOMPrinter.printFilteredJournalToTheDOM(event.target.id);
+    }
 })
