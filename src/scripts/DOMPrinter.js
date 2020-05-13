@@ -24,21 +24,39 @@ const formatJournalEntry = (journalEntry) => {
     `
 }
 
+const DOMPrinter = {
 //Prints the journal entries to the DOM
-const printJournalToTheDOM = () => {
+printJournalToTheDOM() {
 
     //inputs empty string to the DOM to clear the contents before printing
     document.querySelector(".entry-log").innerHTML = "";
 
-    // Gets the journal entries from journal.json, formats each entry with HTML tags and prints them to the DOM 
+    // Gets the journal entries from journal.json, formats each entry with HTML tags using the formatJounralEntry function and prints them to the DOM 
     APIManager.getJournalEntries()
         .then(entries => {
             entries.forEach(entry => {
                 document.querySelector(".entry-log").innerHTML += formatJournalEntry(entry);
             })
         })
+},
+
+
+printFilteredJournalToTheDOM(moodInput) {
+    
+    document.querySelector(".entry-log").innerHTML = "";
+    
+    APIManager.getJournalEntries()
+    .then(entries => entries.filter(entry => entry.mood === moodInput))
+    .then(filteredEntries => {
+        filteredEntries.forEach(entry => {
+            document.querySelector(".entry-log").innerHTML += formatJournalEntry(entry);
+        })
+    })
+
+}
 }
 
 
-export default printJournalToTheDOM
+
+export default DOMPrinter
 
