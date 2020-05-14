@@ -27,6 +27,20 @@
       "entry": "Jordan lectured on editing an object in the DOM.  We learned how to inject a form in the DOM entry and autopopulate it with information from the JSON file.",
       "mood": "Drained",
       "id": 5
+    },
+    {
+      "Date": "2020-05-13",
+      "concept": "Test",
+      "entry": "Test",
+      "mood": "Jubilant",
+      "id": 6
+    },
+    {
+      "Date": "2020-05-14",
+      "concept": "testing",
+      "entry": "This is a test",
+      "mood": "Flummoxed",
+      "id": 7
     }
   ]
 }

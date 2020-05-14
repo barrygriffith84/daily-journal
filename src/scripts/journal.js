@@ -29,7 +29,8 @@ document.querySelector("#record-btn").addEventListener("click", function () {
     if (inputArray.some(word => curseArray.includes(word))) {
         alert("Oh that's crass.  I don't go for that kind of talk.")
     } else{
-    APIManager.postJournalEntry(createJournalEntry()).then(() => {
+    APIManager.postJournalEntry(createJournalEntry())
+    .then(() => {
         DOMPrinter.printJournalToTheDOM()})
     }  
 })
@@ -46,10 +47,16 @@ document.querySelector("#entry-log").addEventListener("click", () => {
         
         // Deletes the JSON object with the chosen ID then reprints the entries to the DOM
         APIManager.deleteJournalEntry(IDToDelete).then(DOMPrinter.printJournalToTheDOM)     
+    
+    } else if (event.target.id.includes("edit-btn")) {
+        const IDToEdit = event.target.id.split("-")[2]
+        DOMPrinter.printEditForm(IDToEdit);
+    } else if (event.target.id.includes("save-btn")) {
+        console.log("save-btn clicked")
     }
 })
 
-// DOMPrinter.printFilteredJournalToTheDOM()
+
 
 document.querySelector("#radio-form").addEventListener("click", () => {
     if (event.target.id === "All") {

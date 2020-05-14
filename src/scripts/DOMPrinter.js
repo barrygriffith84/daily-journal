@@ -20,7 +20,41 @@ const formatJournalEntry = (journalEntry) => {
             <p>${journalEntry.entry}</p>
             <p>${journalEntry.mood}</p>
             <button class="delete-btn" id="delete-btn-${journalEntry.id}">Delete</button>
-        </section
+            <button id="edit-btn-${journalEntry.id}">Edit</button>
+        </section>
+    `
+}
+
+const createEditForm = (JSONEntry) => {
+
+    return `
+    <form action="">
+      <fieldset>
+        <label for="journalDate">Date of Entry</label>
+        <input type="date" name="journalDate" id="journalDate" value="${JSONEntry.Date}">
+      </fieldset>
+
+      <fieldset>
+        <label for="conceptsCovered">Concepts Covered</label>
+        <input type="text" name="conceptsCovered" id="conceptsCovered" maxlength="100" value="${JSONEntry.concept}">
+      </fieldset>
+
+      <fieldset>
+        <label for="journalEntry">Journal Entry</label>
+        <textarea name="journalEntry" id="journalEntry" maxlength="200" >${JSONEntry.entry}</textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="mood">Mood</label>
+        <select name="mood" id="mood" value="${JSONEntry.mood}">
+          <option value="Jubilant">Jubilant</option>
+          <option value="Copacetic">Copacetic</option>
+          <option value="Flummoxed">Flummoxed</option>
+          <option value="Drained">Drained</option>
+        </select>
+      </fieldset>
+    </form>
+    <button class="save-btn" id="save-btn">Save</button>
     `
 }
 
@@ -44,7 +78,7 @@ printJournalToTheDOM() {
 printFilteredJournalToTheDOM(moodInput) {
     
     document.querySelector(".entry-log").innerHTML = "";
-    
+      
     APIManager.getJournalEntries()
     .then(entries => entries.filter(entry => entry.mood === moodInput))
     .then(filteredEntries => {
@@ -52,6 +86,20 @@ printFilteredJournalToTheDOM(moodInput) {
             document.querySelector(".entry-log").innerHTML += formatJournalEntry(entry);
         })
     })
+},
+
+printEditForm(id) {
+const entryCard = document.querySelector(`#single-entry-${id}`)
+// console.log(entryCard)
+
+APIManager.getOneEntry(id)
+.then(journalObject => {
+    entryCard.innerHTML = createEditForm(journalObject)
+})
+
+// entryCard.innerHTML = createEditForm(journalObject)
+
+
 }
 }
 

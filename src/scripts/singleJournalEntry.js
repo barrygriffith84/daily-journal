@@ -10,6 +10,7 @@ const createJournalEntry = () => {
         entry: `${entryValue}`,
         mood: `${moodValue}`
     }
+    
     return journalEntryObject;
 }
 

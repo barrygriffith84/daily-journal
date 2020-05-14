@@ -22,19 +22,19 @@
 
       <fieldset>
         <label for="conceptsCovered">Concepts Covered</label>
-        <input type="text" name="conceptsCovered" id="conceptsCovered" maxlength="100">
+        <input type="text" name="conceptsCovered" id="conceptsCovered" maxlength="100" value="Test">
       </fieldset>
 
       <fieldset>
         <label for="journalEntry">Journal Entry</label>
-        <textarea name="journalEntry" id="journalEntry" maxlength="200"></textarea>
+        <textarea name="journalEntry" id="journalEntry" maxlength="200" value="This is a test"></textarea>
       </fieldset>
 
       <fieldset>
         <label for="mood">Mood</label>
         <select name="mood" id="mood">
           <option value="Jubilant">Jubilant</option>
-          <option value="Moderately Pleased">Moderately Pleased</option>
+          <option value="Copacetic">Copacetic</option>
           <option value="Flummoxed">Flummoxed</option>
           <option value="Drained">Drained</option>
         </select>
@@ -51,17 +51,15 @@
       <label for="All">All</label>
       <input type="radio" id="Jubilant" name="mood" value="Jubilant">
       <label for="Jubilant">Jubilant</label>
-      <input type="radio" id="Moderately Pleased" name="mood" value="Moderately Pleased">
-      <label for="Moderately-Pleased">Moderately Pleased</label>
+      <input type="radio" id="Copacetic" name="mood" value="Copacetic">
+      <label for="Copacetic">Copacetic</label>
       <input type="radio" id="Flummoxed" name="mood" value="Flummoxed">
       <label for="Flummoxed">Flummoxed</label>
       <input type="radio" id="Drained" name="mood" value="Drained">
       <label for="Drained">Drained</label>
-      
     </div>
   </form>
   <article class="entry-log" id="entry-log">
-
   </article>
   <script type="module" src="scripts/journal.js"></script>
 </body>
