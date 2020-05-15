@@ -1,5 +1,5 @@
 import DOMPrinter from './DOMPrinter.js'
-import createJournalEntry from './singleJournalEntry.js'
+import objectManager from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
 //Prints the entries to the DOM
@@ -29,7 +29,7 @@ document.querySelector("#record-btn").addEventListener("click", function () {
     if (inputArray.some(word => curseArray.includes(word))) {
         alert("Oh that's crass.  I don't go for that kind of talk.")
     } else{
-    APIManager.postJournalEntry(createJournalEntry())
+    APIManager.postJournalEntry(objectManager.createJournalObject())
     .then(() => {
         DOMPrinter.printJournalToTheDOM()})
     }  
@@ -52,7 +52,9 @@ document.querySelector("#entry-log").addEventListener("click", () => {
         const IDToEdit = event.target.id.split("-")[2]
         DOMPrinter.printEditForm(IDToEdit);
     } else if (event.target.id.includes("save-btn")) {
-        console.log("save-btn clicked")
+        console.log("save-btn clicked");
+        APIManager.updateJournalEntry(objectManager.editJournalObject())
+        .then(DOMPrinter.printJournalToTheDOM);
     }
 })
 
@@ -60,8 +62,10 @@ document.querySelector("#entry-log").addEventListener("click", () => {
 
 document.querySelector("#radio-form").addEventListener("click", () => {
     if (event.target.id === "All") {
+        // Print the entire entries array in journal.json to the DOM
         DOMPrinter.printJournalToTheDOM();
     } else {
+        //  Print the filtered results from the entries array in journal.json based on which mood is selected
         DOMPrinter.printFilteredJournalToTheDOM(event.target.id);
     }
 })

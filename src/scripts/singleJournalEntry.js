@@ -1,18 +1,26 @@
 //Grabs the information inside of the form and places it inside of an object
-const createJournalEntry = () => {
-    const dateValue = document.querySelector("#journalDate").value
-    const conceptsValue = document.querySelector("#conceptsCovered").value
-    const entryValue = document.querySelector("#journalEntry").value
-    const moodValue = document.querySelector("#mood").value
-    const journalEntryObject = {
-        Date: `${dateValue}`,
-        concept: `${conceptsValue}`,
-        entry: `${entryValue}`,
-        mood: `${moodValue}`
+const objectManager = {
+    createJournalObject: () => {
+        return {
+            Date: document.querySelector("#journalDate").value,
+            concept: document.querySelector("#conceptsCovered").value,
+            entry: document.querySelector("#journalEntry").value,
+            mood: document.querySelector("#mood").value
+        }
+    },
+
+    editJournalObject: () => {
+        return {
+            Date: document.querySelector("#editJournalDate").value,
+            concept: document.querySelector("#editConceptsCovered").value,
+            entry: document.querySelector("#editJournalEntry").value,
+            mood: document.querySelector("#editMood").value,
+            id: event.target.id.split("-")[2]
+        }
     }
-    
-    return journalEntryObject;
+
+
 }
 
-export default createJournalEntry
+export default objectManager
 

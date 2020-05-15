@@ -1,11 +1,11 @@
 {
   "entries": [
     {
-      "id": 1,
-      "Date": "4/17/2020",
+      "Date": "2020-04-17",
       "concept": "Daily Journal",
-      "entry": "Instructor Spurlock did an amazing job explaining how to do the Daily Journal exercise",
-      "mood": "Jubilant"
+      "entry": "Tommy did an amazing job explaining how to do the Daily Journal exercise",
+      "mood": "Jubilant",
+      "id": 1
     },
     {
       "Date": "2020-05-11",
@@ -18,7 +18,7 @@
       "Date": "2020-05-12",
       "concept": "Deleting entries from a JSON file",
       "entry": "Jordan lectured on how to delete entries from a JSON file by adding a delete button to the object that are printed.  She used the restaurants api as an example.",
-      "mood": "Moderately Pleased",
+      "mood": "Copacetic",
       "id": 4
     },
     {
@@ -29,18 +29,11 @@
       "id": 5
     },
     {
-      "Date": "2020-05-13",
-      "concept": "Test",
-      "entry": "Test",
-      "mood": "Jubilant",
-      "id": 6
-    },
-    {
       "Date": "2020-05-14",
-      "concept": "testing",
-      "entry": "This is a test",
-      "mood": "Flummoxed",
-      "id": 7
+      "concept": "CRUD: Update",
+      "entry": "Jordan gave the second lecture on CRUD: Update.  During the live-code event she showed us how to grab the information in the edit form and PUT it in the JSON file.",
+      "mood": "Copacetic",
+      "id": 6
     }
   ]
 }

@@ -31,22 +31,22 @@ const createEditForm = (JSONEntry) => {
     <form action="">
       <fieldset>
         <label for="journalDate">Date of Entry</label>
-        <input type="date" name="journalDate" id="journalDate" value="${JSONEntry.Date}">
+        <input type="date" name="journalDate" id="editJournalDate" value="${JSONEntry.Date}">
       </fieldset>
 
       <fieldset>
         <label for="conceptsCovered">Concepts Covered</label>
-        <input type="text" name="conceptsCovered" id="conceptsCovered" maxlength="100" value="${JSONEntry.concept}">
+        <input type="text" name="conceptsCovered" id="editConceptsCovered" maxlength="100" value="${JSONEntry.concept}">
       </fieldset>
 
       <fieldset>
         <label for="journalEntry">Journal Entry</label>
-        <textarea name="journalEntry" id="journalEntry" maxlength="200" >${JSONEntry.entry}</textarea>
+        <textarea name="journalEntry" id="editJournalEntry" maxlength="200" >${JSONEntry.entry}</textarea>
       </fieldset>
 
       <fieldset>
         <label for="mood">Mood</label>
-        <select name="mood" id="mood" value="${JSONEntry.mood}">
+        <select name="mood" id="editMood" value="${JSONEntry.mood}">
           <option value="Jubilant">Jubilant</option>
           <option value="Copacetic">Copacetic</option>
           <option value="Flummoxed">Flummoxed</option>
@@ -54,7 +54,7 @@ const createEditForm = (JSONEntry) => {
         </select>
       </fieldset>
     </form>
-    <button class="save-btn" id="save-btn">Save</button>
+    <button class="save-btn" id="save-btn-${JSONEntry.id}">Save</button>
     `
 }
 
@@ -74,9 +74,8 @@ printJournalToTheDOM() {
         })
 },
 
-
 printFilteredJournalToTheDOM(moodInput) {
-    
+
     document.querySelector(".entry-log").innerHTML = "";
       
     APIManager.getJournalEntries()
@@ -98,12 +97,8 @@ APIManager.getOneEntry(id)
 })
 
 // entryCard.innerHTML = createEditForm(journalObject)
-
-
 }
 }
-
-
 
 export default DOMPrinter
 
