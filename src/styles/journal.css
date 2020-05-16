@@ -56,3 +56,17 @@ button {
     padding-top: 0vh;
     margin-top: 0vh;
 }
+
+.home-btn {
+    width: 50vw;
+    height: 5vh;
+}
+
+.dream-btn {
+    width: 50vw;
+    height: 5vh;
+}
+
+.btn-container {
+    display: flex;
+}

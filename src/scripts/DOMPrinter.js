@@ -12,6 +12,10 @@ import APIManager from './APIManager.js'
 // The HTML for the home page
 const createHomePage = () => {
 return `
+<div class="btn-container">
+<button class="home-btn" id="home-btn" value="home">Homeland</button>
+<button class="dream-btn" id="dream-btn" value="dream">Dreamland</button>
+</div>
 <div class="background-container"
 <div class="form-container" id="form-container">
 <h1 class="form-heading">Daily Journal</h1>
@@ -52,6 +56,10 @@ return `
 // Page where the journal entries are printed
 const createDreamland = () => {
   return `
+  <div class="btn-container">
+<button class="home-btn" id="home-btn" value="home">Homeland</button>
+<button class="dream-btn" id="dream-btn" value="dream">Dreamland</button>
+</div>
   <div class="dream-land" id="dream-land">
   <form class="radio-form" id="radio-form">
     <p>Please select a mood to filter</p>
