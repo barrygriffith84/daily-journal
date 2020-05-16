@@ -9,6 +9,7 @@ const objectManager = {
         }
     },
 
+    //Grabs the information inside of the form and places it inside of an object the can be PUT in the JSON file
     editJournalObject: () => {
         return {
             Date: document.querySelector("#editJournalDate").value,

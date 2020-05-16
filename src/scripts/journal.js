@@ -2,6 +2,8 @@ import DOMPrinter from './DOMPrinter.js'
 import objectManager from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
+DOMPrinter.printHomePage()
+
 //Prints the entries to the DOM
 DOMPrinter.printJournalToTheDOM()
 

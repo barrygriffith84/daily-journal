@@ -9,9 +9,73 @@ import APIManager from './APIManager.js'
 */
 
 
-//Puts the entry into HTML tags
+// The HTML for the home page
+const createHomePage = () => {
+return `
+<div class="background-container"
+<div class="form-container" id="form-container">
+<h1 class="form-heading">Daily Journal</h1>
+<form action="">
+  <fieldset>
+    <label for="journalDate">Date of Entry</label>
+    <input type="date" name="journalDate" id="journalDate">
+  </fieldset>
+
+  <fieldset>
+    <label for="conceptsCovered">Concepts Covered</label>
+    <input type="text" name="conceptsCovered" id="conceptsCovered" maxlength="100" value="Test">
+  </fieldset>
+
+  <fieldset>
+    <label for="journalEntry">Journal Entry</label>
+    <textarea name="journalEntry" id="journalEntry" maxlength="200" value="This is a test"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <label for="mood">Mood</label>
+    <select name="mood" id="mood">
+      <option value="Jubilant">Jubilant</option>
+      <option value="Copacetic">Copacetic</option>
+      <option value="Flummoxed">Flummoxed</option>
+      <option value="Drained">Drained</option>
+    </select>
+  </fieldset>
+</form>
+
+<button class="record-btn" id="record-btn">Record Journal Entry</button>
+
+</div>
+</div>
+`
+}
+
+// Page where the journal entries are printed
+const createJournalPage = () => {
+  return `
+  <div class="dream-land" id="dream-land">
+  <form class="radio-form" id="radio-form">
+    <p>Please select a mood to filter</p>
+    <div>
+      <input type="radio" id="All" name="mood" checked>
+      <label for="All">All</label>
+      <input type="radio" id="Jubilant" name="mood" value="Jubilant">
+      <label for="Jubilant">Jubilant</label>
+      <input type="radio" id="Copacetic" name="mood" value="Copacetic">
+      <label for="Copacetic">Copacetic</label>
+      <input type="radio" id="Flummoxed" name="mood" value="Flummoxed">
+      <label for="Flummoxed">Flummoxed</label>
+      <input type="radio" id="Drained" name="mood" value="Drained">
+      <label for="Drained">Drained</label>
+    </div>
+  </form>
+  <article class="entry-log" id="entry-log">
+  </article>
+  </div>
+  `
+}
+
+//Places the journal entry into HTML tags
 const formatJournalEntry = (journalEntry) => {
-    // create your own HTML structure for a journal entry
     return `
         <section class="single-entry" id="single-entry-${journalEntry.id}">
             <br>
@@ -59,6 +123,11 @@ const createEditForm = (JSONEntry) => {
 }
 
 const DOMPrinter = {
+//Prints the home page to the DOM
+printHomePage() {
+document.querySelector("body").innerHTML = createHomePage();
+},
+
 //Prints the journal entries to the DOM
 printJournalToTheDOM() {
 

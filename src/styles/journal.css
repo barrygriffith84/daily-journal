@@ -1,7 +1,8 @@
 body{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     font-family: 'Cinzel', serif;
+    margin: 0px;
 }
 
 form {
@@ -9,7 +10,7 @@ form {
     flex-direction: column;
     width: 45vw;
     font-weight: bolder;
-    /* border: 1px solid brown */
+    /* border: 1px solid brown; */
 }
 
 fieldset {
@@ -17,14 +18,23 @@ fieldset {
     flex-direction: column;
 }
 
-body {
+.background-container {
     background-image: url("/unicorn.jpg") ;
     color: pink;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    padding: 40vh 0vw 0vh 50vw;
+    margin: 0px;
 }
 
 button {
     background-color: pink;
     font-family: 'Cinzel', serif;
+    width: 45vw;
     /* border: 1px solid red; */
 }
 
@@ -32,11 +42,12 @@ button {
     margin-left: 50vw;
     margin-top: 40vh; 
     width: 45vw;
-    /* border: 1px solid aqua; */
+    /* border: 1px solid brown; */
 }
 
 .form-heading {
     /* border: 1px solid orange; */
+    width: 45vw;
     text-align: center;
     font-size: 4vw;
     font-family: 'Cedarville Cursive', cursive;
