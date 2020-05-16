@@ -4,23 +4,20 @@ import APIManager from './APIManager.js'
 
 DOMPrinter.printHomePage();
 
-DOMPrinter.printDreamlandToTheDOM();
+// DOMPrinter.printDreamlandToTheDOM();
 
 // Prints the entries to the DOM
-DOMPrinter.printJournalToTheDOM();
+// DOMPrinter.printJournalToTheDOM();
 
-document.querySelector("#conceptsCovered").addEventListener("keyup", () => {
+//Keyup to set character limits on the Concepts Covered and Journal Entry portion of the form
+document.querySelector("#output-container").addEventListener("keyup", () => {
+    console.log(document.querySelector("#journalEntry").value.length)
     if (document.querySelector("#conceptsCovered").value.length >= 100) {
         alert("You have reached the character limit for this input")
-    }
-})
-
-document.querySelector("#journalEntry").addEventListener("keyup", () => {
-    if (document.querySelector("#journalEntry").value.length >= 200) {
+    } else if (document.querySelector("#journalEntry").value.length >= 200) {
         alert("You have reached the character limit for this input")
     }
 })
-
 
 //  Listens for the record button, creates a new journal entry, and prints the journal to the DOM
 document.querySelector("#record-btn").addEventListener("click", function () {

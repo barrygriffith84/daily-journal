@@ -12,11 +12,7 @@ import APIManager from './APIManager.js'
 // The HTML for the home page
 const createHomePage = () => {
 return `
-<div class="btn-container">
-<button class="home-btn" id="home-btn" value="home">Homeland</button>
-<button class="dream-btn" id="dream-btn" value="dream">Dreamland</button>
-</div>
-<div class="background-container"
+<div class="background-container" id="background-container">
 <div class="form-container" id="form-container">
 <h1 class="form-heading">Daily Journal</h1>
 <form action="">
@@ -56,10 +52,7 @@ return `
 // Page where the journal entries are printed
 const createDreamland = () => {
   return `
-  <div class="btn-container">
-<button class="home-btn" id="home-btn" value="home">Homeland</button>
-<button class="dream-btn" id="dream-btn" value="dream">Dreamland</button>
-</div>
+
   <div class="dream-land" id="dream-land">
   <form class="radio-form" id="radio-form">
     <p>Please select a mood to filter</p>
@@ -133,11 +126,11 @@ const createEditForm = (JSONEntry) => {
 const DOMPrinter = {
 //Prints the home page to the DOM
 printHomePage() {
-document.querySelector("body").innerHTML = createHomePage();
+document.querySelector(".output-container").innerHTML = createHomePage();
 },
 
 printDreamlandToTheDOM() {
- document.querySelector("body").innerHTML = createDreamland();
+ document.querySelector(".output-container").innerHTML = createDreamland();
 },
 
 //Prints the journal entries to the DOM
