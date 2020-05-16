@@ -50,7 +50,7 @@ return `
 }
 
 // Page where the journal entries are printed
-const createJournalPage = () => {
+const createDreamland = () => {
   return `
   <div class="dream-land" id="dream-land">
   <form class="radio-form" id="radio-form">
@@ -126,6 +126,10 @@ const DOMPrinter = {
 //Prints the home page to the DOM
 printHomePage() {
 document.querySelector("body").innerHTML = createHomePage();
+},
+
+printDreamlandToTheDOM() {
+ document.querySelector("body").innerHTML = createDreamland();
 },
 
 //Prints the journal entries to the DOM

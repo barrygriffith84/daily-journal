@@ -2,11 +2,11 @@ import DOMPrinter from './DOMPrinter.js'
 import objectManager from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
-DOMPrinter.printHomePage()
+DOMPrinter.printHomePage();
 
+DOMPrinter.printDreamlandToTheDOM();
 //Prints the entries to the DOM
-DOMPrinter.printJournalToTheDOM()
-
+DOMPrinter.printJournalToTheDOM();
 
 document.querySelector("#conceptsCovered").addEventListener("keyup", () => {
     if (document.querySelector("#conceptsCovered").value.length >= 100) {
