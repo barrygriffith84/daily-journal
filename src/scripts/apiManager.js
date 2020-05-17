@@ -38,6 +38,4 @@ const APIManager = {
     }
 }
 
-
-
 export default APIManager

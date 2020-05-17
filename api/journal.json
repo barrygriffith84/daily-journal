@@ -34,6 +34,13 @@
       "entry": "Jordan gave the second lecture on CRUD: Update.  During the live-code event she showed us how to grab the information in the edit form and PUT it in the JSON file.",
       "mood": "Copacetic",
       "id": 6
+    },
+    {
+      "Date": "2020-05-15",
+      "concept": "Database Relationships",
+      "entry": "Jordan lectured on a few different database relationships, and using join tables in JSON files.",
+      "mood": "Copacetic",
+      "id": 7
     }
   ]
 }
