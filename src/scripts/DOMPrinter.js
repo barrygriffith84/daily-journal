@@ -12,7 +12,7 @@ import APIManager from './APIManager.js'
 // The HTML for the home page
 const createHomePage = () => {
 return `
-<div class="background-container" id="background-container">
+<div class="homeland-container" id="homeland-container">
 <div class="form-container" id="form-container">
 <h1 class="form-heading">Daily Journal</h1>
 <form action="">
@@ -53,7 +53,7 @@ return `
 const createDreamland = () => {
   return `
 
-  <div class="dream-land" id="dream-land">
+  <div class="dreamland-container" id="dreamland-container">
   <form class="radio-form" id="radio-form">
     <p>Please select a mood to filter</p>
     <div>
@@ -169,8 +169,6 @@ APIManager.getOneEntry(id)
 .then(journalObject => {
     entryCard.innerHTML = createEditForm(journalObject)
 })
-
-// entryCard.innerHTML = createEditForm(journalObject)
 }
 }
 

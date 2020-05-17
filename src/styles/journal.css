@@ -1,7 +1,29 @@
 body{
-    /* display: flex;
-    flex-direction: column; */
     font-family: 'Cinzel', serif;
+    margin: 0px;
+}
+
+.homeland-container {
+    background-image: url("/unicorn.jpg") ;
+    color: pink;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    margin: 0px;
+}
+
+.dreamland-container {
+    background-image: url("/dreamland-gif-background.gif") ;
+    color: pink;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
     margin: 0px;
 }
 
@@ -18,18 +40,7 @@ fieldset {
     flex-direction: column;
 }
 
-.background-container {
-    background-image: url("/unicorn.jpg") ;
-    color: pink;
-    height: 95vh;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid red; */
-    padding: 40vh 0vw 0vh 50vw;
-    margin: 0px;
-}
+
 
 button {
     background-color: pink;
@@ -39,10 +50,11 @@ button {
 }
 
 .form-container {
-    /* margin-left: 50vw; */
-    /* margin-top: 40vh;  */
-    /* width: 45vw; */
-    border: 1px solid brown;
+position: relative;
+left: 50vw;
+top: 30vh;
+    /* border: 1px solid brown; */
+    width: 45vw;
 }
 
 .form-heading {
