@@ -2,10 +2,15 @@ import DOMPrinter from './DOMPrinter.js'
 import objectManager from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
-// DOMPrinter.printHomePage();
+/* TODO:  
+-Look into filtering issue when you click the edit button. 
+-Look into CSS that will make the backround image fill the page no matter what size the window is.
+*/
 
-DOMPrinter.printDreamlandToTheDOM();
-DOMPrinter.printJournalToTheDOM();
+DOMPrinter.printHomePage();
+
+// DOMPrinter.printDreamlandToTheDOM();
+// DOMPrinter.printJournalToTheDOM();
 
 document.querySelector("#btn-container").addEventListener("click", () => {
     if (event.target.id.includes("home")) {
@@ -60,8 +65,14 @@ document.querySelector("#output-container").addEventListener("click", () => {
     } else if (event.target.id.includes("save-btn")) {
         APIManager.updateJournalEntry(objectManager.editJournalObject())
             .then(DOMPrinter.printJournalToTheDOM);
+
+    } else if (event.target.id.includes("cancel-btn")) {
+        DOMPrinter.printJournalToTheDOM();
+
     } else if (event.target.id.includes("All")) {
         DOMPrinter.printJournalToTheDOM();
+
+        //Radio buttons to filter which journal entries are printed
     } else if (["Jubilant", "Copacetic", "Flummoxed", "Drained"].some(r => r === event.target.value)) {
         //  Print the filtered results from the entries array in journal.json based on which mood is selected
         DOMPrinter.printFilteredJournalToTheDOM(event.target.id);

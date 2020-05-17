@@ -84,8 +84,8 @@ const formatJournalEntry = (journalEntry) => {
             <p>${journalEntry.entry}</p>
             <p>Mood: ${journalEntry.mood}</p>
             <section class="entry-btn-section" id="entry-btn-section">
-            <button class="delete-btn" id="delete-btn-${journalEntry.id}">Delete</button>
-            <button class="edit-btn" id="edit-btn-${journalEntry.id}">Edit</button>
+            <button class="entry-btn delete-btn" id="delete-btn-${journalEntry.id}">Delete</button>
+            <button class="entry-btn edit-btn" id="edit-btn-${journalEntry.id}">Edit</button>
             </section>
         </section>
     `
@@ -94,7 +94,7 @@ const formatJournalEntry = (journalEntry) => {
 const createEditForm = (JSONEntry) => {
 
     return `
-    <form action="">
+    <form class="edit-form" id="edit-form">
       <fieldset>
         <label for="journalDate">Date of Entry</label>
         <input type="date" name="journalDate" id="editJournalDate" value="${JSONEntry.Date}">
@@ -120,7 +120,10 @@ const createEditForm = (JSONEntry) => {
         </select>
       </fieldset>
     </form>
-    <button class="save-btn" id="save-btn-${JSONEntry.id}">Save</button>
+    <section class="entry-btn-section" id="entry-btn-section">
+    <button class="entry-btn save-btn" id="save-btn-${JSONEntry.id}">Save</button>
+    <button class="entry-btn cancel-btn" id="cancel-btn-${JSONEntry.id}">Cancel</button>
+    </section>
     `
 }
 

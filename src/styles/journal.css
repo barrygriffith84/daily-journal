@@ -1,10 +1,10 @@
-body{
+body {
     font-family: 'Cinzel', serif;
     margin: 0px;
 }
 
 .homeland-container {
-    background-image: url("images/unicorn.jpg") ;
+    background-image: url("images/unicorn.jpg");
     color: pink;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -16,7 +16,7 @@ body{
 }
 
 .dreamland-container {
-    background-image: url("images/space.gif") ;
+    background-image: url("images/space.gif");
     background-repeat: no-repeat;
     color: pink;
     background-size: 100% 100%;
@@ -26,7 +26,6 @@ body{
     /* border: 1px solid red; */
     margin: 0px;
     align-items: center;
-
 }
 
 form {
@@ -42,8 +41,6 @@ fieldset {
     flex-direction: column;
 }
 
-
-
 button {
     background-color: pink;
     font-family: 'Cinzel', serif;
@@ -52,9 +49,9 @@ button {
 }
 
 .form-container {
-position: relative;
-left: 50vw;
-top: 30vh;
+    position: relative;
+    left: 50vw;
+    top: 30vh;
     /* border: 1px solid brown; */
     width: 45vw;
 }
@@ -99,7 +96,7 @@ top: 30vh;
     text-align: center;
 }
 
-.entry-log{
+.entry-log {
     display: flex;
     flex-flow: row wrap;
     width: 90vw;
@@ -111,28 +108,23 @@ top: 30vh;
 
 .single-entry {
     position: relative;
-    border:1px solid pink;
+    border: 1px solid pink;
     width: 15vw;
     height: 48vh;
     background-color: black;
     margin: 1vw;
-
 }
 
-.edit-btn{
+.entry-btn{
     width: 15vw;
 }
 
-.delete-btn{
-    width: 15vw;;
-}
-
 .entry-btn-section {
- position: absolute;
+    position: absolute;
     right: 0;
     bottom: 0;
 }
 
-
-    
-
+.edit-form {
+    width: 15vw;
+}
