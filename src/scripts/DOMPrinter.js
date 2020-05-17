@@ -55,8 +55,8 @@ const createDreamland = () => {
 
   <div class="dreamland-container" id="dreamland-container">
   <form class="radio-form" id="radio-form">
-    <p>Please select a mood to filter</p>
-    <div>
+    <h1 class="radio-heading" id="radio-heading">Please select a mood to filter</h1>
+    <div class="radio-btns" id="radio-btns">
       <input type="radio" id="All" name="mood" checked>
       <label for="All">All</label>
       <input type="radio" id="Jubilant" name="mood" value="Jubilant">
@@ -85,7 +85,7 @@ const formatJournalEntry = (journalEntry) => {
             <p>${journalEntry.entry}</p>
             <p>${journalEntry.mood}</p>
             <button class="delete-btn" id="delete-btn-${journalEntry.id}">Delete</button>
-            <button id="edit-btn-${journalEntry.id}">Edit</button>
+            <button class="edit-btn" id="edit-btn-${journalEntry.id}">Edit</button>
         </section>
     `
 }

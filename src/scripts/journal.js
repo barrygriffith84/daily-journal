@@ -2,12 +2,10 @@ import DOMPrinter from './DOMPrinter.js'
 import objectManager from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
-DOMPrinter.printHomePage();
+// DOMPrinter.printHomePage();
 
-// DOMPrinter.printDreamlandToTheDOM();
-
-// Prints the entries to the DOM
-// DOMPrinter.printJournalToTheDOM();
+DOMPrinter.printDreamlandToTheDOM();
+DOMPrinter.printJournalToTheDOM();
 
 document.querySelector("#btn-container").addEventListener("click", () => {
     if (event.target.id.includes("home")) {
