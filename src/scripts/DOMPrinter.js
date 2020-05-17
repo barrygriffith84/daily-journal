@@ -79,13 +79,14 @@ const createDreamland = () => {
 const formatJournalEntry = (journalEntry) => {
     return `
         <section class="single-entry" id="single-entry-${journalEntry.id}">
-            <br>
             <h3>${journalEntry.concept}</h3>
             <p>${journalEntry.Date}</p>
             <p>${journalEntry.entry}</p>
-            <p>${journalEntry.mood}</p>
+            <p>Mood: ${journalEntry.mood}</p>
+            <section class="entry-btn-section" id="entry-btn-section">
             <button class="delete-btn" id="delete-btn-${journalEntry.id}">Delete</button>
             <button class="edit-btn" id="edit-btn-${journalEntry.id}">Edit</button>
+            </section>
         </section>
     `
 }
