@@ -13,9 +13,14 @@ import APIManager from './APIManager.js'
 const createHomePage = () => {
 return `
 <div class="homeland-container" id="homeland-container">
+<form class="login-form" id="login-form">
+<input type="text" id="username-input" placeholder="username">
+<input type="password" id="password-input" placeholder="password">
+</form>
+<button id="login-btn">Login</button>
 <div class="form-container" id="form-container">
 <h1 class="form-heading">Daily Journal</h1>
-<form action="">
+<form>
   <fieldset>
     <label for="journalDate">Date of Entry</label>
     <input type="date" name="journalDate" id="journalDate">
@@ -144,7 +149,8 @@ printJournalToTheDOM() {
     document.querySelector(".entry-log").innerHTML = "";
 
     // Gets the journal entries from journal.json, formats each entry with HTML tags using the formatJounralEntry function and prints them to the DOM 
-    APIManager.getJournalEntries()
+    
+    APIManager.getUserEntries()
         .then(entries => {
             entries.forEach(entry => {
                 document.querySelector(".entry-log").innerHTML += formatJournalEntry(entry);

@@ -1,46 +1,82 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "barry",
+      "username": "bg",
+      "password": "barryrules"
+    },
+    {
+      "id": 2,
+      "name": "gene",
+      "username": "gg",
+      "password": "generules"
+    }
+  ],
   "entries": [
     {
       "Date": "2020-04-17",
       "concept": "Daily Journal",
       "entry": "Tommy gave a demonstration on how to do the Daily Journal exercise.",
       "mood": "Jubilant",
-      "id": 1
+      "id": 1,
+      "userId": 1
     },
     {
       "Date": "2020-05-11",
       "concept": "Array Methods",
       "entry": "Tommy lectured about array methods: forEach, map, reduce, filter, and sort",
       "mood": "Flummoxed",
-      "id": 3
+      "id": 3,
+      "userId": 1
     },
     {
       "Date": "2020-05-12",
       "concept": "Deleting entries from a JSON file",
       "entry": "Jordan lectured on how to delete entries from a JSON file by adding a delete button to the object that are printed.  She used the restaurants api as an example.",
       "mood": "Copacetic",
-      "id": 4
+      "id": 4,
+      "userId": 1
     },
     {
       "Date": "2020-05-13",
       "concept": "CRUD: Updating",
       "entry": "Jordan lectured on editing an object in the DOM.  We learned how to inject a form in the DOM entry and autopopulate it with information from the JSON file.",
       "mood": "Drained",
-      "id": 5
+      "id": 5,
+      "userId": 1
     },
     {
       "Date": "2020-05-14",
       "concept": "CRUD: Updating",
       "entry": "Jordan gave the second lecture on CRUD: Update.  During the live-code event she showed us how to grab the information in the edit form and PUT it in the JSON file.",
       "mood": "Jubilant",
-      "id": 6
+      "id": 6,
+      "userId": 1
     },
     {
       "Date": "2020-05-15",
       "concept": "Database Relationships",
-      "entry": "Jordan lectured on a few different database relationships, and using join tables in JSON files.",
-      "mood": "Copacetic",
-      "id": 7
+      "entry": "Jordan lectured on a few different database relationships, and using join tables in a JSON database.",
+      "mood": "Jubilant",
+      "id": 7,
+      "userId": 1
+    },
+    {
+      "Date": "2020-05-18",
+      "concept": "Authentication",
+      "entry": "I am Gene, invader of Dreamland.  I am inputing dreams without your permission",
+      "mood": "Jubilant",
+      "id": 8,
+      "userId": 2
+    },
+    {
+      "Date": "2020-05-18",
+      "concept": "Test",
+      "entry": "Testing userID",
+      "mood": "Jubilant",
+      "userId": "2",
+      "id": 9
     }
   ]
 }

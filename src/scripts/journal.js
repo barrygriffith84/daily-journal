@@ -3,8 +3,11 @@ import objectManager from './singleJournalEntry.js'
 import APIManager from './APIManager.js'
 
 /* TODO:  
+-Fix the mood filter so it only returns based on mood and userId.
+-Do splash page to force log in before they can record journal entries.
 -Look into filtering issue when you click the edit button. 
 -Look into CSS that will make the backround image fill the page no matter what size the window is.
+-Add Enter keypress to POST the journal entry
 */
 
 DOMPrinter.printHomePage();
@@ -52,6 +55,18 @@ document.querySelector("#output-container").addEventListener("click", () => {
             APIManager.postJournalEntry(objectManager.createJournalObject())
         }
         //If the delete button is clicked the entry is deleted
+    } else if (event.target.id.includes("login-btn")) {
+        const usernameValue = document.querySelector("#username-input").value;
+        const passwordValue = document.querySelector("#password-input").value;
+        
+        fetch(`http://localhost:8088/users?username=${usernameValue}`)
+        .then((r) => r.json())
+        .then((user) => {
+            console.log(user[0].id)
+            sessionStorage.setItem("userId", user[0].id);
+            // TODO add userId to objectManager.createJounralEntry
+        })
+
     } else if (event.target.id.includes("delete-btn")) {
 
         if (confirm("You are about to delete a jounral entry")) {
@@ -60,7 +75,7 @@ document.querySelector("#output-container").addEventListener("click", () => {
 
             // Deletes the JSON object with the chosen ID then reprints the entries to the DOM
             APIManager.deleteJournalEntry(IDToDelete).then(DOMPrinter.printJournalToTheDOM)
-        } 
+        }
 
         //If the edit button is clicked the form is injected into that journal entry with prepopulated information from the journal entry
     } else if (event.target.id.includes("edit-btn")) {

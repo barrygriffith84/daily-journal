@@ -5,7 +5,8 @@ const objectManager = {
             Date: document.querySelector("#journalDate").value,
             concept: document.querySelector("#conceptsCovered").value,
             entry: document.querySelector("#journalEntry").value,
-            mood: document.querySelector("#mood").value
+            mood: document.querySelector("#mood").value,
+            userId: sessionStorage.userId
         }
     },
 
