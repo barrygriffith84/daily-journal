@@ -3,7 +3,7 @@
     {
       "Date": "2020-04-17",
       "concept": "Daily Journal",
-      "entry": "Tommy did an amazing job explaining how to do the Daily Journal exercise",
+      "entry": "Tommy gave a demonstration on how to do the Daily Journal exercise.",
       "mood": "Jubilant",
       "id": 1
     },
@@ -41,34 +41,6 @@
       "entry": "Jordan lectured on a few different database relationships, and using join tables in JSON files.",
       "mood": "Copacetic",
       "id": 7
-    },
-    {
-      "Date": "",
-      "concept": "this fuckers",
-      "entry": "",
-      "mood": "Jubilant",
-      "id": 8
-    },
-    {
-      "Date": "",
-      "concept": "this fuckers",
-      "entry": "",
-      "mood": "Jubilant",
-      "id": 9
-    },
-    {
-      "Date": "",
-      "concept": "this fuckers",
-      "entry": "",
-      "mood": "Jubilant",
-      "id": 10
-    },
-    {
-      "Date": "",
-      "concept": "this fuckers",
-      "entry": "",
-      "mood": "Jubilant",
-      "id": 11
     }
   ]
 }
